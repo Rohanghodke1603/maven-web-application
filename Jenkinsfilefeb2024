@@ -13,6 +13,7 @@ properties([[$class: 'JobLocalConfiguration', changeReasonComment: ''], pipeline
 
 //Checkout Stage
 stage('CheckoutCode'){
+buildName 'Dev- ${env.BUILD_NUMBER}'
   git branch: 'development', credentialsId: 'af39f694-8105-4ebd-9d60-db90181a2e58', url: 
 'https://github.com/Rohanghodke1603/maven-web-application.git'
 }
